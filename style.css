@@ -7,7 +7,7 @@ body {
 }
 
 .navbar {
-  /*position: fixed;*/
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -33,7 +33,8 @@ body {
   padding: 0 15px;
 }
 
-.navbar ul li a, .navbar ul li button {
+.navbar ul li a,
+.navbar ul li button {
   text-decoration: none;
   color: #333;
   background: none;
@@ -44,19 +45,54 @@ body {
 }
 
 .section {
-  padding: 50px 20px;
+  padding: 20px 10px;
   text-align: center;
+  margin-top: 30px; /* To avoid overlap with fixed navbar */
+  
 }
+
+.card-container1 {
+  display: flex;
+  justify-content: space-around;
+  gap: auto;
+  flex-wrap: wrap;
+}
+
+
+.card-container10 {
+  display: flex;
+  justify-content: space-around;
+  gap: auto;
+  flex-wrap: wrap;
+}
+
+.card-container4 {
+  display: flex;
+  justify-content: space-around;
+  gap: auto;
+  flex-wrap: wrap;
+}
+
+
 
 .card {
   background: #e0e5ec;
-  padding: 20px;
+  padding: 15px;
   border-radius: 15px;
   box-shadow: 8px 8px 15px #a3b1c6, -8px -8px 15px #ffffff;
-  margin: 20px auto;
-  width: 80%;
-  max-width: 500px;
+  width: 30%;
+  min-width: 250px;
   transition: all 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  box-shadow: inset 4px 4px 8px #a3b1c6, inset -4px -4px 8px #ffffff;
+  transform: translateY(-4px);
+}
+
+.section {
+  padding: 20px 10px;
 }
 
 .social button {
@@ -129,19 +165,6 @@ body {
   display: none;
 }
 
-/* Hover Effects */
-.card:hover, .btn:hover, .social button:hover, .form input:hover {
-  box-shadow: inset 4px 4px 8px #a3b1c6, inset -4px -4px 8px #ffffff;
-  transform: translateY(-4px);
-  transition: all 0.3s ease;
-}
-
-/* Hover Effect for Navbar Links and Logo */
-.navbar ul li a:hover, .navbar ul li button:hover, .navbar .logo:hover {
-  box-shadow: inset 4px 4px 8px #a3b1c6, inset -4px -4px 8px #ffffff;
-  transform: translateY(-2px);
-}
-
 .logo img {
   width: 40px;
   height: 40px;
@@ -149,4 +172,8 @@ body {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   margin-right: 10px;
   vertical-align: middle;
+}
+
+#home {
+  padding-top: 100px; /* Adjust based on navbar height */
 }
